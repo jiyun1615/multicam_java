@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            font-size: 15px;
+        }
+        li{
+            padding-right: 20px;
+        }
+
+        #menu{
+            background: #d9d9d9;
+            width: 400px;
+            height : 50px;
+            position: fixed;
+            top: 5px;
+            left: 5px;
+            border-radius: 10px;
+        }
+
+        #page {
+            margin-top:60px;
+            width : 800px;
+            height : 1000px;
+            background: #edf8ff;
+        }
+        #side{
+            position: fixed;
+            right : 10px;
+            top : 100px;
+            height : 400px;
+            width: 100px;
+            border-radius: 10px;
+            border: 2px solid lightgray;
+            background: #d9d9d9;
+        }
+        #smallTitle1 {
+            font-weight: bold;
+            color: brown;
+        }
+        
+        #smallTitle2 {
+            padding-top: 10px;
+            font-weight: bold;
+            color: #2f75a1;
+        }
+        #centerImg{
+            height: 200px;
+        }
+
+        #productTitle{
+            color :#10517a;
+            font-weight: bold;
+        }
+
+        #productContent{
+            color :black;
+        }
+
+        #login_t:first-child {
+            font-weight: bold;
+        }
+        #user_t p{
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id = "toal">
+        <div id = "menu">
+            <ul>
+                <li style="float: left;">
+                    <a href="page20.html">회원가입</a>
+                </li>
+                <li style="float: left;">
+                    <a href="page30.html">제품정보</a>
+                </li>
+                <li style="float: left;">
+                    <a href="page40.html">구성원</a>
+                </li>
+                <li style="float: left;">
+                    <a href="page50.html">장바구니</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id = "side">
+            <p id="smallTitle1">리모콘</p>
+        </div>
+
+        <div id = "page">
+            <p id="smallTitle2">회원가입</p>
+            
+            <h2>검색 단어 입력</h2>
+            <form action="보내는 서버 주소">
+                검색할 단어
+                <input type="text">
+                <input type="submit" value="검색어 전송">
+            </form>
+            
+            <hr>
+            
+            <h2>로그인</h2>
+            <form action="보내는 서버 주소">
+                <table id = "login_t">
+                    <tr>
+                        <td>
+                            아이디
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            패스워드
+                        </td>
+                        <td>
+                            <input type="password" name="" id="" style="margin-right: 10px;">
+                        </td>
+                         <td>
+                            <input type="submit" value="로그인">
+                         </td>
+                    </tr>
+                </table>
+            </form>
+
+            <hr>
+
+            <h2>회원가입 화면</h2>
+            
+            <form action="보내는 서버 주소">
+            <table id="user_t">
+                <tr>
+                    <td>
+                        <p>가입할 ID </p>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>    
+                <tr>
+                    <td>
+                        <p>가입할 PW </p>
+                    </td>
+                    <td>
+                        <input type="password">
+                    </td>
+                </tr>    
+                <tr>
+                    <td>
+                        <p>이름</p>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="홍길동">
+                    </td>
+                </tr>    
+                <tr>
+                    <td>
+                        <p>성별</p>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="">여성
+                        <input type="radio" name="gender" id="">남성
+                    </td>                    
+                </tr>    
+                <tr>
+                    <td>
+                        <p>취미</p>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" id="" style="margin-right: 5px;">달리기
+                        <input type="checkbox" name="hobby" id="" style="margin-right: 5px;">유튜브 시청
+                        <input type="checkbox" name="hobby" id="" style="margin-right: 5px;">인터넷 서핑
+                    </td>                    
+                </tr>    
+                <tr>
+                    <td>
+                        <p>전화번호 통신사</p>
+                    </td>
+                    <td>
+                        <select name="tel" id="">
+                            <option value="skt">SKT</option>
+                            <option value="lgu">LGU+</option>
+                            <option value="kt">KT</option>
+                        </select>
+                        <input type="number"
+                        placeholder="' - ' 없이 적어주세요">
+                    </td>                    
+                </tr>    
+                <tr>
+                    <td>
+                        <p>생년월일</p>
+                    </td>
+                    <td>
+                        <input type="date" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>가입한 시기</p>
+                    </td>
+                    <td>
+                        <input type="datetime-local" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>자기소개</p>
+                    </td>
+                    <td>
+                        <textarea name="" id="" cols="30" rows="10">100자 이내</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="회원가입">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img[src $=png]{
+            height: 500px;
+            border: 2px dotted black;
+            border-radius: 10px;
+        }
+
+        img[src $=jpg]{
+            height: 300px;
+            border: 1.5px solid orange;
+            border-radius: 5px;
+        }
+        #d1 {
+            background: #f0f7ff;
+        }
+
+        #d1 > p {
+            /* d2 바로밑에 p만! */
+            background: lightblue;
+        }
+
+        #d2 {
+            background: #fff5f7;
+            margin-bottom: 200px;
+        }
+        #d2 p { 
+            /* d2 밑에 p 전부 */
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <img src="children.png">
+    <img src="cat5.jpg">
+    <!-- hr : 가로줄 -->
+    <hr>
+    <div id="d1">
+        <!-- p태그 : 문단, 자동 줄바꿈 -->
+        <p>내가 좋아하는 음식</p>
+        <div id = "d11">
+            <p>떡볶이</p>
+            <p>치킨</p>
+        </div>
+    </div>
+    <div id = "d2">
+        <p>내가 싫어하는 음식</p>
+        <div id = "d22">
+            <p>마라탕</p>
+            <p>고수</p>
+        </div>
+    </div>
+    
+</body>
+</html>
