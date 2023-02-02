@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="out.js"></script>
+    <script>
+
+        quest = prompt("몇 번 문제를 보시겠습니까?(1~7)")
+
+        if (quest == 1) {
+            //1
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    document.write("@")
+                }
+                document.write("<br>")
+            }
+        }
+        else if (quest == 2) {
+            //2
+            site = prompt("자주가는 사이트가 무엇인가요?")
+            if (site == "네이버" || site == "naver") {
+                location.href = "http://www.naver.com";
+            } else if (site == "다음" || site == "daum") {
+                location.href = "http://www.daum.net";
+            } else {
+                location.href = "http://www.google.com";
+                location.href = "http://www.google.com";
+            }
+        }
+
+        else if (quest == 3) {
+
+
+            //3
+            document.write("휴식 함수 실행 시 : ")
+            rest()
+            document.write("<br>")
+            document.write("여행 함수 실행 시 : ")
+            travel()
+        }
+
+        else if (quest == 4) {
+            //4
+            ans = confirm("당신은 자바 프로그래머인가요?")
+            if (ans == true) {
+                alert("훌륭한 웹 프로그래머시군요")
+            }
+            else {
+                alert("다른 언어를 사용하시는군요!")
+            }
+        }
+        else if(quest == 5){
+            //5
+            coffee_price = prompt("커피 값은 얼마인가요?")
+            buy_cnt = prompt("몇 잔이나 드시나요?")
+            total = coffee_price*buy_cnt
+            if(total >= 15000){
+                alert("할인해드릴게요!")
+            }else{
+                alert("정가로 내셔야해요!")
+            }
+        }
+        else if(quest == 6) {
+            food = prompt("뭘 드실래요?")
+            food_price = prompt("금액은 얼마인가요?")
+            if(food_price == "커피" && food_price < 5000){
+                alert("제가 살게요!");
+            }else{
+                alert("네가 사세요");
+            }
+        }
+        else if(quest == 7){
+            now = prompt("지금은 오전인가요 오후인가요?")
+            if(now == "오전"){
+                for(let i=0; i<3; i++){
+                    document.write("굿모닝!<br>")
+                }
+            }else if (now == "오후"){
+                for(let i=0; i<5; i++){
+                    document.write("굿애프터눈!")
+                }
+            }
+            else {
+                for(let i=0; i<10; i++){
+                    document.write("굿나잇!")
+                }
+            }
+        }
+
+        else {
+            alert("그런 문제는 없습니다!")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
