@@ -1,0 +1,12 @@
+.navbar-brand{
+    margin-right: 10%;
+}
+
+.align{
+    display: flex;
+}
+
+.card_location{
+    margin-top: 20px;
+    margin-right : 5%;
+}
