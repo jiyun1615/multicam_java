@@ -13,13 +13,14 @@ public class 문제1 {
 		if(year > 100) {
 			System.out.println("밀레니엄 세대시군요.");
 		}else {
-			System.out.println("밀레니엄 세대가 아니시군요");
 		}
+			System.out.println("밀레니엄 세대가 아니시군요");
 		
 		//토일은 쉬고, 아니면 공부
 		int day = date.getDay();
+		System.out.println(day);
 		switch (day) {
-		case 6: case 7:
+		case 6: case 0:
 			System.out.println("쉬~~~~자");
 			break;
 		default:
