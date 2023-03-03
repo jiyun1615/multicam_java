@@ -1,0 +1,38 @@
+1. SQL을 3가지로 구분, 각각을 간단 설명, 예를 들어보세요.
+DDL : DB 생성, 수정, 삭제
+DML : 테이블 생성, 수정, 삭제
+DCL : 계정 관리, ROLLBACK
+
+2. DML로 할 수 있는 조작 4가지를 부르는 말
+CRUD : CREATE, READ, UPDATE, DELETE
+
+3. DML의 조작 4가지에 해당하는 각 SQL문
+INSERT, SELECT, UPDATE, DELETE
+
+4. 정형데이터 베이스란?
+넣을 틀, 값이 정해져 있는 데이터 베이스
+
+5. 스키마란?
+데이터베이스의 전체적인 논리적 구조
+
+6. 제약조건이란? 예 1개 이상
+CONSTRAINT -> PK, UNIQUE, NOT NULL
+
+7. primary key를 왜 설정하는가?
+다른 객체들과 구분할 수 있는 특징점을 통해 값을 구별하기 위함
+
+8. foreign key를 왜 설정하는가?
+다른 테이블과의 값을 연결하기 위해..?
+
+9. 저장할 대상을 부르는 말? 한글/영어
+객체, entity
+
+10. varchar2와 char의 차이
+문자열과 문자
+
+11. join을 왜 하는가?
+여러 테이블의 정보를 한번에 보고 찾기 위해서
+
+12. join의 3가지 종류 비교 
+INNER JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN
+교집합, A, B
