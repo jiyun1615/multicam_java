@@ -1,0 +1,6 @@
+1. JDBC 4단계 정리
+ : 드라이버 설정 -> DB연결 -> SQL문 객체로 만듦 -> SQL문 전송
+2. 데이터를 접근해서 처리하는 클래스를 부르는 이름 : DAO(Data Access Object)
+3. DAO에 주로 넣는 기능 4가지 : CRUD(Create, Read, Upload, Delete)
+4. DAO에 주로 넣는 기능 중 C(insert)만 사용해봄 : create
+5. sql에서 객체를 만들었을 때 모르는 값을 표현하는 연산자 : ?
