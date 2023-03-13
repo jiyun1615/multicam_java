@@ -13,6 +13,43 @@ import javax.swing.JOptionPane;
 
 public class HotelDAO {
 
+	public HotelVO selectOne(String hotelID) {
+		HotelVO bag = new HotelVO();
+		Connection conn = null;
+		ResultSet rs = null;
+		PreparedStatement ps = null;
+		try {
+			// 1.커넥터 설정
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			// 2.DB연결
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "system";
+			String pw = "oracle";
+			conn = DriverManager.getConnection(url, user, pw);
+
+			// 3. sql문 만들기
+			String sql = "select * from hr.HOTEL where hotelid = ?";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, hotelID);
+			rs = ps.executeQuery();
+			
+			if (rs.next()) {
+				bag.setName(rs.getString(2));
+				bag.setPrice(Integer.parseInt(rs.getString(3)));
+				bag.setScore(Float.parseFloat(rs.getString(4)));
+				bag.setLocation(rs.getString(5));
+				bag.setTel(rs.getString(6));
+				bag.setPhoto(rs.getString(7));
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return bag;
+	}
+
 	public List<HotelVO> filtering(float filt, int choice) {
 
 		List<HotelVO> list = new ArrayList<>();
@@ -33,10 +70,12 @@ public class HotelDAO {
 			// 3. sql문 만들기
 			String sql = "select * from hr.HOTEL where score >= ? order by price";
 			String sor = "";
-			if (choice == 1) sor = "";		//가격 저렴한 순 정렬
-			else if (choice == 2) sor = " desc";	//가격 비싼 순 정렬
+			if (choice == 1)
+				sor = ""; // 가격 저렴한 순 정렬
+			else if (choice == 2)
+				sor = " desc"; // 가격 비싼 순 정렬
 			sql += sor;
-			
+
 			ps = con.prepareStatement(sql);
 			ps.setString(1, Float.toString(filt));
 
@@ -52,7 +91,7 @@ public class HotelDAO {
 				bag.setTel(rs.getString(6));
 				bag.setPhoto(rs.getString(7));
 
-				//list에 가방 담기
+				// list에 가방 담기
 				list.add(bag);
 			}
 
@@ -74,7 +113,5 @@ public class HotelDAO {
 		}
 		return list;
 	}
-
-	
 
 }
