@@ -3,17 +3,18 @@ package Hotel;
 import java.sql.Date;
 
 public class ReservationVO {
-	private String reservationID;
+	private int reservationID;
 	private String hotelID;
 	private Date startDate;
-	private String endDate;
+	private Date endDate;
 	private int roomcnt;
 	private String userID;
 	private int price;
-	public String getReservationID() {
+	
+	public int getReservationID() {
 		return reservationID;
 	}
-	public void setReservationID(String reservationID) {
+	public void setReservationID(int reservationID) {
 		this.reservationID = reservationID;
 	}
 	public String getHotelID() {
@@ -28,10 +29,10 @@ public class ReservationVO {
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
 	public int getRoomcnt() {
