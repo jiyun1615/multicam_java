@@ -82,7 +82,7 @@ public class TravelMainUI {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				HotelUI H_UI = new HotelUI();
+				HotelUI2 H_UI = new HotelUI2();
 				H_UI.open();
 
 			}
