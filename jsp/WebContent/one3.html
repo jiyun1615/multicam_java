@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* alert('회원삭제 페이지입니다. 반갑습니다ㅏ') */
+</script>
+
+<style type="text/css">
+body {
+	background: #f6deff;
+}
+
+button {
+	background: #ab61c7;
+}
+
+.t1 {
+	background: #bff1ff;
+	width: 150px;
+	text-align: center;
+}
+
+#b1 { /* #은 아이디 선택 */
+	color: #fcd2ec;
+}
+#b2 {
+	color : #feebff;
+}
+</style>
+
+</head>
+<body>
+	<h3>게시판상세 페이지</h3>
+	
+	<!-- a태그는 무조건 get방식 요청 -->
+	<a href="http://localhost:8888/web02/one3.jsp?id=100">
+		<button>100번 제품</button>
+	</a>
+	<a href="http://localhost:8888/web02/one3.jsp?id=101">
+		<button>101번 제품</button>
+	</a>
+	<a href="one3.jsp?id=102"> <!-- 같은 폴더 내에서 호출하기때문에 생략 가능 -->
+		<button>102번 제품</button>
+	</a>
+	
+	<hr>
+	<a href = "product.html">
+		<button id = "b1">첫페이지로</button>
+	</a>
+	
+	<form action = "one3.jsp" method = "get">
+	<table border="1">
+		<tr>
+			<td class="t1">검색할 ID :</td>
+			<td><input name="id"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class = "t1">
+				<button id="b2">제품 검색</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
