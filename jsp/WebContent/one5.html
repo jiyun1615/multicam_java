@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* alert('회원삭제 페이지입니다. 반갑습니다ㅏ') */
+</script>
+
+<style type="text/css">
+body {
+	background: #f6deff;
+}
+
+button {
+	background: #ab61c7;
+}
+
+.t1 {
+	background: #bff1ff;
+	width: 150px;
+	text-align: center;
+}
+
+#b1 { /* #은 아이디 선택 */
+	color: #fcd2ec;
+}
+#b2 {
+	color : #feebff;
+}
+</style>
+
+</head>
+<body>
+	<h3>명소상세 페이지</h3>
+	
+	<!-- a태그는 무조건 get방식 요청 -->
+	<a href="http://localhost:8888/web02/one5.jsp?id=1">
+		<button>명소1</button>
+	</a>
+	<a href="http://localhost:8888/web02/one5.jsp?id=2">
+		<button>명소2</button>
+	</a>
+	<a href="one5.jsp?id=3"> <!-- 같은 폴더 내에서 호출하기때문에 생략 가능 -->
+		<button>명소3</button>
+	</a>
+	
+	<hr>
+	
+	<form action = "one5.jsp" method = "get">
+	<table border="1">
+		<tr>
+			<td class="t1">검색할 ID :</td>
+			<td><input name="id"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class = "t1">
+				<button id="b2">명소 검색</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
