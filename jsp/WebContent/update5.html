@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>명소 수정 페이지</title>
+<script type="text/javascript">
+	/* alert('회원삭제 페이지입니다. 반갑습니다ㅏ') */
+</script>
+
+<style type="text/css">
+body {
+	background: #f6deff;
+}
+
+button {
+	background: #ab61c7;
+}
+
+.t1 {
+	background: #bff1ff;
+	width: 150px;
+	text-align: center;
+}
+
+#b1 { /* #은 아이디 선택 */
+	color: #fcd2ec;
+}
+#b2 {
+	color : #feebff;
+}
+</style>
+
+</head>
+<body>
+	<h3>명소수정 페이지</h3>
+	<hr>
+	<a href = "Place.html">
+		<button id = "b1">명소 정보</button>
+	</a>
+	
+	<form action = "update5.jsp">
+	<table border="1">
+		<tr>
+			<td class="t1">명소 ID</td>
+			<td><input name="id"></td>
+		</tr>
+		<tr>
+			<td class="t1">바꿀  평점</td>
+			<td><input name="score"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class = "t1">
+				<button id="b2">명소 수정 데이터 전송</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
