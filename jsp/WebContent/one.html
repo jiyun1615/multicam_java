@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* alert('회원삭제 페이지입니다. 반갑습니다ㅏ') */
+</script>
+
+<style type="text/css">
+body {
+	background: #f6deff;
+}
+
+button {
+	background: #ab61c7;
+}
+
+.t1 {
+	background: #bff1ff;
+	width: 150px;
+	text-align: center;
+}
+
+#b1 { /* #은 아이디 선택 */
+	color: #fcd2ec;
+}
+#b2 {
+	color : #feebff;
+}
+</style>
+
+</head>
+<body>
+	<h3>멤버상세 페이지</h3>
+	
+	<!-- a태그는 무조건 get방식 요청 -->
+	<a href="http://localhost:8888/web02/one.jsp?id=22">
+		<button>멤버22</button>
+	</a>
+	
+	<hr>
+	<a href = "Member.html">
+		<button id = "b1">멤버페이지</button>
+	</a>
+	
+	<form action = "one.jsp" method = "get">
+	<table border="1">
+		<tr>
+			<td class="t1">검색할 아이디 :</td>
+			<td><input name="id"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class = "t1">
+				<button id="b2">멤버 검색</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
