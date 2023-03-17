@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* alert('회원가입 페이지입니다. 반갑습니다ㅏ') */
+</script>
+
+<style type="text/css">
+body {
+	background: #f6deff;
+}
+
+button {
+	background: #ab61c7;
+}
+
+.t1 {
+	background: #bff1ff;
+	width: 150px;
+	text-align: center;
+}
+
+#b1 { /* #은 아이디 선택 */
+	color: #fcd2ec;
+}
+#b2 {
+	color : #feebff;
+}
+</style>
+
+</head>
+<body>
+	<h3>영화추가 페이지</h3>
+	<hr>
+	<a href = "movie.html">
+		<button id = "b1">영화정보페이지로</button>
+	</a>
+	
+	<form action = "insert4.jsp">
+	<table border="1">
+		<tr>
+			<td class="t1">영화ID :</td>
+			<td><input name="ID"></td>
+		</tr>
+		<tr>
+			<td class="t1">영화제목 :</td>
+			<td><input name="title"></td>
+		</tr>
+		<tr>
+			<td class="t1">영화설명 :</td>
+			<td><input name="content"></td>
+		</tr>
+		<tr>
+			<td class="t1">영화장소 : </td>
+			<td><input name="location"></td>
+		</tr>
+		<tr>
+			<td class="t1">영화감독 : </td>
+			<td><input name="director"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class = "t1">
+				<button id="b2">영화 추가</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
