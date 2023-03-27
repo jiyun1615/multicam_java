@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	$(function() { 
+		$("#b1").click(function(){
+			$.ajax({
+				url : "data/rank.xml",
+				success : function(doc){
+					alert("xml요청 성공 >> " + doc)
+					list = $(doc).find('rank')
+					alert(list.length)
+					for(i=0; i< list.length; i++){
+						//console.log($(list[i]).find('name').text())
+						//console.log($(list[i]).find('tel').text())
+						name = $(list[i]).find('name').text()
+						tel = $(list[i]).find('tel').text()
+						$('#result').append(name + ", " + tel + "<br>")
+					}
+				}
+			})
+		})
+		$("#b2").click(function(){
+			$.ajax({
+				url : "data/rank2.xml",
+				success : function(doc){
+					alert("xml2요청 성공 >> " + doc)
+					list = $(doc).find('winner')
+					alert(list.length)
+					for(i=0; i< list.length; i++){
+						//console.log($(list[i]).find('name').text())
+						//console.log($(list[i]).find('tel').text())
+						year_ = $(list[i]).find('year').text()
+						class_ = $(list[i]).find('class').text()
+						name_ = $(list[i]).find('name').text()
+						field_ = $(list[i]).find('field').text()
+						$('#result').append(year_ + ", " + class_+ ", " + name_+ ", " + field_ + "<br>")
+					}
+				}
+			})
+		})
+		$("#b3").click(function(){
+			$.ajax({
+				url : "data/dataset.xml",
+				success : function(doc){
+					alert("xml2요청 성공 >> " + doc)
+					list = $(doc).find('record')
+					alert(list.length)
+					for(i=0; i< list.length; i++){
+						id_ = $(list[i]).find('id').text()
+						first_name_ = $(list[i]).find('first_name').text()
+						last_name_ = $(list[i]).find('last_name').text()
+						email_ = $(list[i]).find('email').text()
+						gender_ = $(list[i]).find('gender').text()
+						address_ = $(list[i]).find('address').text()
+						$('#result').append(id_ + ", " + first_name_ 
+								+ ", " + last_name_ + ", " + email_ + ", " + gender_ + ", " + address_ +"<br>")
+						$.ajax({
+							url : "mock.jsp",
+							//async : "false",
+							data : {
+								id : id_,
+								first_name : first_name_,
+								last_name : last_name_,
+								email : email_,
+								gender : gender_,
+								address : address_
+							},
+							success : function(){
+								console.log('넣기 성공')
+							}
+						})
+					}
+				}
+			})
+		})
+	}) //$
+</script>
+</head>
+<body >
+<button style='color: blue; background: pink' id ="b1">XML받아오기-1</button>
+<button style='background: yellow' id ="b2">XML받아오기-2</button>
+<button style='background: pink' id ="b3">mock데이터받아오기3</button>
+<hr>
+<div id="result"></div>
+</body>
+</html>
