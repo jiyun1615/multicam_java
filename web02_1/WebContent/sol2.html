@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/out.css">
+
+<script type="text/javascript">
+	function bag() {
+		first_ = document.getElementById("first").value
+		resultTag = document.getElementById("result")
+		
+		if(first_ == '휴대폰'){
+			resultTag.innerHTML ='<img src="img/phone.png" width=300>'
+		} else if(first_ == '시계'){
+			resultTag.innerHTML ='<img src="img/watch.png" width=300>'
+		} else{
+			resultTag.innerHTML ='<img src="img/bag.png" width=300>'
+		}
+	}
+	
+	function bag2() {
+		second_ = document.getElementById("second").value
+		if(second_ == '가방'){
+			location.href = "http://www.ysl.com/ko-kr/%EC%97%AC%EC%84%B1-%EC%87%BC%ED%95%91/%ED%95%B8%EB%93%9C%EB%B0%B1/%EB%AA%A8%EB%91%90%EB%B3%B4%EA%B8%B0"
+		}
+		else if(second_ == '시계'){
+			location.href = "https://www.gucci.com/kr/ko/pr/jewelry-watches/watches/watches-for-her/g-timeless-watch-27mm-p-632092I16F08155?gclid=CjwKCAjwq-WgBhBMEiwAzKSH6CfXqPvTtPaguuP2-J-cKX4RQTtYlxMjLzkBCjERyDO8cpMAVFyq0BoC_G0QAvD_BwE&gclsrc=aw.ds"
+		}
+	}
+</script>
+
+</head>
+<body>
+	가방 속 1순위 물건 :
+	<input id='first' value='휴대폰'>
+	<button onclick="bag()">확인</button>
+	<br> 
+	
+	가방 속 2순위 물건 :
+	<input id='second' value='시계'>
+	<button onclick="bag2()">확인</button>
+	<br>
+
+	<hr>	<div id="result"
+		style="color: red; width: 500px; height: 50px; font-size: 30px">
+		결과넣는곳.</div>
+
+</body>
+</html>

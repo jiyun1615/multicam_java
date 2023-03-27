@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/out.css">
+
+<script type="text/javascript">
+	function pwCheck() {
+		pw1_ = document.getElementById("pw1").value
+		pw2_ = document.getElementById("pw2").value	
+		resultTag = document.getElementById("result")
+		
+		if(pw1_ == pw2_){
+			resultTag.innerHTML ='<b>일치</b> <img src="img/yes.jpg" width=300>'
+			location.href = "http://www.naver.com"
+			
+		}
+		else{
+			resultTag.innerHTML ='<b>불일치</b> <img src="img/no.png" width=300>'
+		}
+	}
+	
+	function idCheck(){
+		id1 = document.getElementById("user").value
+		resultTag = document.getElementById("result")
+		if(id1.length<5){
+			resultTag.innerHTML ='아이디의 길이는 최소 5 이상입니다.'
+		}
+		else{
+			resultTag.innerHTML ='가입 가능한 아이디입니다.'
+		}
+	}
+</script>
+
+</head>
+<body>
+	아이디 입력 :
+	<input id='user' value='root'>
+	<button onclick = "idCheck()">글자수 체크</button>
+	<br> 패스워드 :
+	<input id='pw1' value='1234'>
+	<br> 패스워드2 :
+	<input id='pw2' value='1234'>
+	<br>
+	<button onclick="pwCheck()">회원가입</button>
+
+	<hr>	<div id="result"
+		style="color: red; width: 500px; height: 50px; font-size: 30px">결과넣는
+		곳.</div>
+
+</body>
+</html>

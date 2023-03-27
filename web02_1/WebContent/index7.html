@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/out.css">
+
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	$(function() {		//jquery 기본 사용법
+		$("#b1").click(function() {
+//			alert("b1이 클릭되었음")
+			//태그 사이의 글자가 있는 경우와 input 태그의 값이 있는 경우는 다르다. 
+			t1 = $("#text1").text()
+			alert("t1 = " + t1)
+		})
+		$("#b2").click(function() {
+			t2 = $("#text2").val()
+			alert("t2 = " + t2)
+		})
+		$("#b3").click(function() {
+			alert("b3이 클릭되었음")
+			t3 = $("#text3").text("내가 들어간다ㅏ")
+			t4 = $("#text4").val("나의 id 는 ahhahah")
+		})
+	})
+</script>
+
+</head>
+<body>
+
+<h3 id = "text1">나는 1번의 텍스트</h3>
+<input id = "text2" style = "background : pink">
+<h3 id = "text3"> 결과가 들어갈 곳 </h3>
+<input id = "text4" style = "background : pink">
+
+<button id = "b1">b1</button>
+<button id = "b2">b2</button>
+<button id = "b3">b3</button>
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	//시작하자 마자 통신
+	$(function() {
+		$.ajax({
+			url : "index.html",
+			/* data : {}, */
+			success : function(){
+				alert("성공!")
+			},
+			error : function() {
+				
+			}
+		})
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

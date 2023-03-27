@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/out.css">
+
+<script type="text/javascript">
+	function me() {
+		name_ = document.getElementById("name").value
+		company_ = document.getElementById("company").value
+		grade_ = document.getElementById("grade").value
+		gender_ = document.getElementById("gender").value
+		
+		resultTag = document.getElementById("result")
+//		resultTag.innerHTML = company_ + '회사에 ' + grade_ + '로 있는' + name_ + '입니다.'
+		alert(company_ + '회사에 ' + grade_ + '로 있는' + name_ + '입니다.')
+		if(gender_ == '남자'){
+			resultTag.innerHTML ='<img src="img/male.png" width=300>'
+		}
+		else if(gender_ == '여자'){
+			resultTag.innerHTML ='<img src="img/female.png" width=300>'
+		}
+	}
+</script>
+
+</head>
+<body>
+	이름 :
+	<input id='name' value='홍길동'>
+	<br> 회사명 :
+	<input id='company' value='멀티'>
+	<br> 직책 :
+	<input id='grade' value='팀장'>
+	<br> 성별 : 
+	<input id='gender' value='남자'>
+	<br>
+	<button onclick="me()">확인</button>
+
+	<hr>	<div id="result"
+		style="color: red; width: 500px; height: 50px; font-size: 30px">결과넣는
+		곳.</div>
+
+</body>
+</html>

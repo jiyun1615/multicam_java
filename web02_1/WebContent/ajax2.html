@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+ $(function() {
+	$("#b1").click(function() {
+		$.ajax({
+			url : "ok.html",
+			success : function(x) {
+				alert(x)
+				$("#result").append(x + "<br>")
+			}
+		})
+	})
+	$("#b2").click(function() {
+		$.ajax({
+			url : "tour.html",
+			success : function(x) {
+				alert(x)
+				$("#result").append(x + "<br>")
+			}
+		})
+	})
+	$("#b3").click(function() {
+		$.ajax({
+			url : "weather.html",
+			success : function(x) {
+				alert(x)
+				$("#result").append(x + "<br>")
+			}
+		})
+	})
+})
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<button id = "b1">ok 사이트 연결 요청</button>
+<button id = "b2">tour 사이트 연결 요청</button>
+<button id = "b3">weather 사이트 연결 요청</button>
+
+<hr>
+<div id = "result"></div>
+
+</body>
+</html>

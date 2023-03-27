@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+ 	$(function() {
+ 		$("#b1").click(function() {
+			in1_ = $("#in1").val()
+			divTag = $("#result")			
+			divTag.append(in1_ + "<br>")
+		})
+		$("#b2").click(function() {
+			divTag = $("#result")			
+			divTag.append("<img src='img/user.png' width='30'>")
+		})
+		$("#b3").click(function() {
+			in1_ = $("#in1").val()
+			divTag = $("#result")			
+			divTag.append("<img src='img/user.png' width='30'>" + in1_ + "<br>")
+		})
+	})
+</script>
+</head>
+
+<body>
+입력내용 : 
+<input id = "in1" value = 'example comment'> <br>
+<button id = "b1">글자추가</button>
+<button id = "b2">유저추가</button>
+<button id = "b3">동시추가</button>
+<hr>
+<div id = "result"></div>
+
+
+</body>
+</html>
