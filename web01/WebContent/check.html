@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>get 요청(날씨)</h3>
+오늘 날씨는 (맑음, 흐림, 비옴 중)? 선택
+<form action="check.do">
+	<select name = "today">
+		<option value = "맑음">해가쨍쨍</option>
+		<option value = "흐림">구름잔뜩</option>
+		<option value = "비옴">우산준비</option>		
+	</select>
+	<button>오늘의 날씨 서버로 전송</button>
+</form>
+
+<hr>
+<h3>post 요청(출입문 암호)</h3>
+<form action="check.do" method="post">
+오늘의 출입문암호는 (나는 왕이다) 입력
+	<input name = "pass" value="나는 퀸이다">
+<button>출입문 암호 서버로 전송</button>
+</form>
+
+</body>
+</html>
